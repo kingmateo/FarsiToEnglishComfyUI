@@ -82,6 +82,11 @@ This advanced package includes two powerful nodes for translating Persian text t
 
 <div align="center">
 ✨ با ❤️ ساخته شده توسط AHY VFX ✨
+</div>  
+<div align="center">
 ✨ Made with ❤️ by AHY VFX ✨
+</div>  
+<div align="center">
 تلگرام: @AHYVFX
-</div>
+</div>  
+
