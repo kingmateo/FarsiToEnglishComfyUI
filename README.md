@@ -77,5 +77,11 @@ This advanced package includes two powerful nodes for translating Persian text t
 #### 🎯 روش 1: نصب خودکار (توصیه شده) | Method 1: Automatic (Recommended)
 ```bash
 # فایل install_requirements.bat را اجرا کنید
-# Run install_requirements.bat file
-# install_requirements.bat
+```
+
+
+<div align="center">
+✨ با ❤️ ساخته شده توسط AHY VFX ✨
+✨ Made with ❤️ by AHY VFX ✨
+تلگرام: @AHYVFX
+</div>
