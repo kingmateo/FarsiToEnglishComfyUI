@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای دریافت API Key - DeepSeek</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .steps {
+            padding: 40px;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            padding: 30px;
+            border-right: 5px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateX(-5px);
+        }
+        
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .step h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .step-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning h4 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .developer-info {
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        
+        .developer-info h3 {
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .telegram-link {
+            display: inline-block;
+            background: #0088cc;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+        
+        .telegram-link:hover {
+            background: #006699;
+        }
+        
+        .screenshot {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #3498db;
+        }
+        
+        .caption {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .steps {
+                padding: 20px;
+            }
+            
+            .step {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛠️ راهنمای دریافت API Key از DeepSeek</h1>
+            <p>آموزش کامل دریافت کلید API برای استفاده در نود ترجمه ComfyUI</p>
+        </div>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>ثبت‌نام در پلتفرم DeepSeek</h3>
+                <div class="step-content">
+                    <p>ابتدا به وبسایت DeepSeek مراجعه کنید:</p>
+                    <div class="code-block">
+                        https://platform.deepseek.com
+                    </div>
+                    <p>روی دکمه "Sign Up" کلیک کرده و حساب کاربری ایجاد کنید.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>ورود به پنل کاربری</h3>
+                <div class="step-content">
+                    <p>پس از ثبت‌نام و تأیید ایمیل، وارد پنل کاربری خود شوید.</p>
+                    <div class="screenshot">
+                        <img src="./img/panel.png" alt="پنل کاربری DeepSeek">
+                        <p class="caption">وارد پنل که شدید برید به بخش مدیریت کلید ها</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>دریافت API Key</h3>
+                <div class="step-content">
+                    <p>در منوی کناری، روی گزینه "API Keys" کلیک کنید:</p>
+                    <div class="screenshot">
+                        <img src="./img/api.jpg" alt="بخش API Keys">
+                        <p class="caption">سپس روی این بخش بزنید تا پنجره ساخت کلید باز بشود</p>
+                    </div>
+                    <p>حالا کلید را باید ببرید و جای گذاری کنید تا بتونید از هوش مصنوعی به صورت انلاین و مستقیم استفاده کنید</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>تنظیمات API Key</h3>
+                <div class="step-content">
+                    <p>برای کلید API خود یک نام انتخاب کنید (مثلاً: ComfyUI-Translator)</p>
+                    <p>دسترسی‌های لازم را انتخاب کنید (معمولاً همه دسترسی‌ها لازم است)</p>
+                    <div class="screenshot">
+                        <img src="./img/API2.jpg" alt="تنظیمات API Key">
+                        <p class="caption">اگر پنجره دسترسی باز نشد هیچ مشکلی ندارد</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>کپی کردن API Key</h3>
+                <div class="step-content">
+                    <p>پس از ایجاد، کلید API شما نمایش داده می‌شود. حتماً آن را کپی کنید:</p>
+                    <div class="code-block">
+                        sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                    </div>
+                    <div class="screenshot">
+                        <img src="./img/API3.jpg" alt="کپی کردن API Key">
+                        <p class="caption">کلید رو کپی کنید</p>
+                    </div>
+                    <div class="warning">
+                        <h4>⚠️ هشدار امنیتی:</h4>
+                        <p>این کلید را با کسی به اشتراک نگذارید و در محیط امن ذخیره کنید.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">6</div>
+                <h3>استفاده در نود ComfyUI</h3>
+                <div class="step-content">
+                    <p>کلید API را در فایل مربوطه جایگزین کنید:</p>
+                    <div class="code-block">
+                        # در فایل farsi_to_english_deepseek.py<br>
+                        DEEPSEEK_API_KEY = "کلید-API-شما-اینجا"
+                    </div>
+                    <p>یا از طریق فایل .env استفاده کنید:</p>
+                    <div class="code-block">
+                        # ایجاد فایل .env در روت ComfyUI<br>
+                        DEEPSEEK_API_KEY=کلید-API-شما-اینجا
+                    </div>
+                    <div class="screenshot">
+                        <img src="./img/API4.jpg" alt="ویرایش کد">
+                        <p class="caption">کد رو اصلاح کنید و تمام</p>
+                    </div>
+                    <div class="warning">
+                        <h4>📝 نکته مهم:</h4>
+                        <p>برای ویرایش کد های این پلاگین از نوتپد خود ویندوز هم میتونید استفاده کنید</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <h4>📝 نکات مهم:</h4>
+                <ul style="margin-right: 20px;">
+                    <li>API Key شما مانند رمز عبور است - آن را امن نگه دارید</li>
+                    <li>در صورت لو رفتن کلید، بلافاصله آن را غیرفعال کنید</li>
+                    <li>محدودیت استفاده ماهانه را بررسی کنید</li>
+                    <li>برای مشکلات فنی با پشتیبانی DeepSeek تماس بگیرید</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="developer-info">
+                <h3>👨‍💻 توسعه‌دهنده و سازنده</h3>
+                <p><strong>نام:</strong> AHY VFX</p>
+                <p><strong>تخصص:</strong> برنامه نویس و گرافیست</p>
+                <p>برای ارتباط، سوالات فنی و پشتیبانی:</p>
+                <a href="https://t.me/AHYVFX" class="telegram-link" target="_blank">
+                    📨 ارتباط از طریق تلگرام: @AHYVFX
+                </a>
+            </div>
+            
+            <p style="margin-top: 30px; opacity: 0.8;">
+                © 2024 Farsi Translation Nodes for ComfyUI - Developed with ❤️ by AHY VFX
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // افزودن انیمیشن به مراحل
+        document.addEventListener('DOMContentLoaded', function() {
+            const steps = document.querySelectorAll('.step');
+            
+            steps.forEach((step, index) => {
+                step.style.opacity = '0';
+                step.style.transform = 'translateX(50px)';
+                
+                setTimeout(() => {
+                    step.style.transition = 'all 0.6s ease';
+                    step.style.opacity = '1';
+                    step.style.transform = 'translateX(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
